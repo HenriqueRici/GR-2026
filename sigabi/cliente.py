@@ -3,25 +3,20 @@ import requests
 
 class Sigabi:
 
-    def __init__(
-        self,
-        login,
-        senha,
-        base_url="https://apisigabi.seduc.mt.gov.br"
-    ):
-        self.base_url = base_url
+    def __init__(self, login, senha, base_url="https://apisigabi.seduc.mt.gov.br"):
+        self.base_url = base_url.rstrip("/")
         self.login = login
         self.senha = senha
 
         self.access_token = None
         self.refresh_token = None
         self.headers = {}
+        self.session = requests.Session()
 
         self.autenticar()
 
     def autenticar(self):
-
-        r = requests.post(
+        r = self.session.post(
             f"{self.base_url}/auth/login",
             headers={
                 "Accept": "application/json",
@@ -31,11 +26,11 @@ class Sigabi:
                 "grant_type": "password",
                 "username": self.login,
                 "password": self.senha
-            }
+            },
+            timeout=30
         )
 
         r.raise_for_status()
-
         dados = r.json()
 
         self.access_token = dados["access_token"]
@@ -48,34 +43,28 @@ class Sigabi:
         }
 
     def renovar_token(self):
-
         if not self.refresh_token:
             self.autenticar()
             return
 
-        r = requests.post(
+        r = self.session.post(
             f"{self.base_url}/auth/refresh",
             headers={
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
-            json={
-                "refresh_token": self.refresh_token
-            }
+            json={"refresh_token": self.refresh_token},
+            timeout=30
         )
 
-        # Se o refresh_token estiver inválido ou expirado,
-        # realiza uma nova autenticação com login e senha.
         if r.status_code in (401, 403):
             self.autenticar()
             return
 
         r.raise_for_status()
-
         dados = r.json()
 
         self.access_token = dados["access_token"]
-
         if dados.get("refresh_token"):
             self.refresh_token = dados["refresh_token"]
 

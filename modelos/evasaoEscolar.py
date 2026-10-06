@@ -2,24 +2,29 @@ import pandas as pd
 
 
 def evasao(base, baseEvasao):
+    base = base.copy()
     base["LotacaoGR"] = base["LotacaoGR"].astype(str).str.strip()
+    baseEvasao = baseEvasao.copy()
     baseEvasao["LotacaoGR"] = baseEvasao["LotacaoGR"].astype(str).str.strip()
-    base = pd.merge(base, baseEvasao, on=['LotacaoGR'], how='left')
+    return pd.merge(base, baseEvasao, on=['LotacaoGR'], how='left')
 
-    return base
 
-def pontuacaoEvasao(row):    
-    if row['CargoGR'] in ['PROFESSOR EM REGÊNCIA', 'GESTOR']:
-        if row['Frequencia'] > 0.9:
+def pontuacaoEvasao(row):
+    freq = row.get('Frequencia', 0)
+    cargo = row.get('CargoGR')
+
+    if pd.isna(freq):
+        return 0
+
+    if cargo in ['PROFESSOR EM REGÊNCIA', 'GESTOR']:
+        if freq > 0.9:
             return 100
-        elif  0.8 <= row['Frequencia'] <= 0.9:
+        elif 0.8 <= freq <= 0.9:
             return 30
-        else: 0
+        return 0
     else:
-        if row['Frequencia'] > 0.85:
+        if freq > 0.85:
             return 100
-        elif  0.8 <= row['Frequencia'] <= 0.85:
+        elif 0.8 <= freq <= 0.85:
             return 30
-        else: 0
-
-    return 0
+        return 0
