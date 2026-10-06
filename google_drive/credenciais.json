@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "feisty-script-509317-v7",
+  "private_key_id": "c53ecf9fcbd60a0cba2a1dd7233691f3f6434d8e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGrY9pV71AsNO7\n2nqUKPetpzrkPW0LEblAalMyrQkN9GbL7ELCn+C+iSOAQchidx3l1oTKLFglT8Rj\nT17ypoQ1uK2bAXXM2Fp9HE2vN+GWQ5ipnkLOiQrtkwRwIlf1LSXsuVv4bvpOygf6\nBaWJa9+YIxGaiv7rwbNWRYDbPXUzA9KMUrHn+CBhUGm0R1JHgje08jv/VkVPrcMS\nz14kmBkvaxSepOyxshmaguCaob5Lxndvo/wdchh+Mb7YCkq4Fijoqz1L4rhB/2aN\nXMpW5TcySJrbCro0x8tFb7NeooPmnba8vh+RFu5rbGseECeTdvrp0umIuO2P9ye8\n8zWb/4T3AgMBAAECggEAGMQi5+1NhKZmRnkGJbjzovyBLVlw4dvcPWjjpSIHymsI\nc2woqE04vVeoCsFogsm5euCiXfdoJ4KJhx2qRtI2EeJLFdL5RcdEhGsGTgzHvK0B\nd0doqYlQyOu2Nmo5j7EIlLlIezAOWMr7cpHIoFhHn5XjiGHCRE45lkwEs4+2L90W\nYajDLfP6AibrGclXG/u/n6C5r9qvjMb74Pz+jB+Lf6FpmvgxvJhsHTXrHsmEsVNK\nrejXOZpKSdDvvuPfSKaU/OUGO+EnvZe20/FWSG5PEb9BwSFMg9oDD1ASp4fB3V46\nrqifV9tZj2KoL4Vuv5kMQPXQMajh89np1UxJFv+lCQKBgQDmCgFH6GcQVFGjcRft\nLlyr2SWy5PGRuDVozxlcyAiMqhOO0xGa0vAYFkovBm5peJF1Xs55e+sspYPdJaWW\nxh5q0k722HJ5KU8W7qH6CT+0DcAYdJj24wX1iMILwfrDBxqTODEpQVzmZqlrgMdS\n3On1lu+qXMRG9M0TNAF3mpjCqQKBgQDdGYKR2d1N94A/RqJKuAJiR42CRPOk3WlC\nZyfxMD+nXtElbMJBOLv/ndJvB8N6VtWvANIXJmg7I5S/h8HH/+KaHUEGQxMgqU5b\nYb6dK4zNxI5qipK9WFpBne75zZ7jeteagRwa8aZW1kyXytvt/BOJF3jvL+7Vnllk\nU1sc/epunwKBgAYan9wTm6CATEZE+viNMWJR+cEceBiAxdIJJMgkeq2Y2boBeccc\n78gD12YWCpn73Ag8QshQdHYT0kLs+87bZPU6rWO5bJgwc2vNWzjyQ+F4N++uMFzk\nu0S/oz6CoC/KoXbkl9FbbaajdL1ohmF5gS/GGIfxvDeRyVtIFv3geUs5AoGBALPT\nhr4Hm5ZJQha05VSuOsoidjbIy/2AU5c9fWAOpQcE+EhfH9OaSFXL0BacEuJS8/Ml\nULqhc07+ToJE8Vgwh+Ze+r8UGN+MtH1gj38Xp6rIPijrUhQMY0RRJsgn9B4CkI9K\niUhk2KxyGdOvm5cBWgY7gBHSQ4edBgmyPj3jSyPzAoGABdGakGjExqDqhh0xiAIm\nYlVcsw5r7v8e/YTSO0A2a1qtqsRxvW2nzmVXjof+SUEtSlQOi3dTI5Ea1WNeIjMv\nfUgAb6ImOyzcSRDkIDoj03KehvTLZL0F/NGxKSyLpZnouG3AmzBvO+3KTvdE19Cv\noqZDe1f3KtpnlFEey3QLO9I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "python-drive@feisty-script-509317-v7.iam.gserviceaccount.com",
+  "client_id": "110818603255606233129",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/python-drive%40feisty-script-509317-v7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
